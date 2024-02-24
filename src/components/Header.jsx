@@ -281,6 +281,66 @@ const Header = () => {
             display={{ base: "flex", md: "flex", lg: "none", xl: "none" }}
             onClick={onOpen}
           />
+          <ChakraLink
+            display={{ base: "none", md: "none", lg: "block", xl: "block" }}
+            fontFamily="Protest Riot"
+            fontWeight="500"
+            as={ScrollLink}
+            to="Accordion"
+            smooth={true}
+            duration={500}
+            position="relative"
+            _hover={{
+              textDecoration: "none",
+              _after: {
+                width: "100%",
+              },
+              color: "blue",
+            }}
+            _after={{
+              content: "''",
+              width: "0",
+              height: "1.5px",
+              transition: "width .25s ease-in-out",
+              backgroundColor: "blue",
+              position: "absolute",
+              left: "50%",
+              bottom: "0",
+              transform: " translate(-50%,0%) ",
+            }}
+          >
+            Accordion
+          </ChakraLink>
+          <ChakraLink
+            display={{ base: "none", md: "none", lg: "block", xl: "block" }}
+            fontFamily="Protest Riot"
+            fontWeight="500"
+            as={ScrollLink}
+            to="AdvanceWork"
+            smooth={true}
+            duration={500}
+            position="relative"
+            _hover={{
+              textDecoration: "none",
+              _after: {
+                width: "100%",
+              },
+              color: "blue",
+            }}
+            _after={{
+              content: "''",
+              width: "0",
+              height: "1.5px",
+              transition: "width .25s ease-in-out",
+              backgroundColor: "blue",
+              position: "absolute",
+              left: "50%",
+              bottom: "0",
+              transform: " translate(-50%,0%) ",
+            }}
+          >
+            AdvanceWork
+          </ChakraLink>
         </Flex>
       </SimpleGrid>
 
@@ -511,6 +571,66 @@ const Header = () => {
                 }}
               >
                 Button
+              </ChakraLink>
+              <ChakraLink
+                fontFamily="Protest Riot"
+                fontWeight="500"
+                as={ScrollLink}
+                to="Accordion"
+                smooth={true}
+                duration={500}
+                position="relative"
+                onClick={onClose}
+                _hover={{
+                  textDecoration: "none",
+                  _after: {
+                    width: "100%",
+                  },
+                  color: "blue",
+                }}
+                _after={{
+                  content: "''",
+                  width: "0%",
+                  height: "100%",
+                  transition: "all .25s ease-in-out",
+                  backgroundColor: "rgba(0, 0, 255, 0.3)",
+                  position: "absolute",
+                  left: "0%",
+                  top: "0%",
+                  transform: " translate(0%,0%) ",
+                }}
+              >
+                Accordion
+              </ChakraLink>
+              <ChakraLink
+                fontFamily="Protest Riot"
+                fontWeight="500"
+                as={ScrollLink}
+                to="AdvanceWork"
+                smooth={true}
+                duration={500}
+                position="relative"
+                onClick={onClose}
+                _hover={{
+                  textDecoration: "none",
+                  _after: {
+                    width: "100%",
+                  },
+                  color: "blue",
+                }}
+                _after={{
+                  content: "''",
+                  width: "0%",
+                  height: "100%",
+                  transition: "all .25s ease-in-out",
+                  backgroundColor: "rgba(0, 0, 255, 0.3)",
+                  position: "absolute",
+                  left: "0%",
+                  top: "0%",
+                  transform: " translate(0%,0%) ",
+                }}
+              >
+                AdvanceWork
               </ChakraLink>
             </Flex>
           </DrawerBody>

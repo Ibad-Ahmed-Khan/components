@@ -7,6 +7,8 @@ import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 import Password from "./components/Password";
 import Button from "./components/Button";
+import AdvanceWork from "./components/AdvanceWork";
+import Accordion from "./components/Accordion";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Drawer />
       <Password />
       <Button />
+      <Accordion />
+      <AdvanceWork />
     </Box>
   );
 }

@@ -52,7 +52,7 @@ const Tabs = () => {
                     index + 1 == tab ? "translate(0%,90%)" : "translate(0%,0%)"
                   }
                   transformOrigin="inherit"
-                  transition="all .25s ease-in-out"
+                  transition="all .5s ease-in-out"
                   border="3px solid #fff"
                 >
                   Tab{index + 1}
@@ -64,22 +64,27 @@ const Tabs = () => {
         <Box mt="4rem">
           {Data.map((item, index) => {
             return (
-              <Flex
-                flexDirection="column"
-                transition="all .5s ease-in-out"
-                display={index + 1 == tab ? "block" : "none"}
-                textTransform="capitalize"
-                p="4"
-                borderRadius="md"
-                bg="#fff"
-              >
-                <Text fontWeight="100">name : {item.name}</Text>
-                <Text fontWeight="100">age : {item.age}</Text>
-                <Flex>
-                  <Text fontWeight="100">email:</Text>
-                  <Link fontWeight="100">{item.email}</Link>
+              <Box pos="relative">
+                <Flex
+                  flexDirection="column"
+                  transition="all .5s ease-in-out"
+                  transform={index + 1 == tab ? "scale(1,1)" : "scale(0,1)"}
+                  transformOrigin="left"
+                  textTransform="capitalize"
+                  p="4"
+                  borderRadius="md"
+                  bg="#fff"
+                  pos="absolute"
+                  left="-7rem"
+                >
+                  <Text fontWeight="100">name : {item.name}</Text>
+                  <Text fontWeight="100">age : {item.age}</Text>
+                  <Flex>
+                    <Text fontWeight="100">email:</Text>
+                    <Link fontWeight="100">{item.email}</Link>
+                  </Flex>
                 </Flex>
-              </Flex>
+              </Box>
             );
           })}
         </Box>
