@@ -10,7 +10,7 @@ const AdvanceWork = () => {
   const [selectedUser, setSelectedUser] = useState(null);
 
   const handleSearchChange = (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value.toLowerCase());
   };
 
   const toggleUserDetail = (item) => {
